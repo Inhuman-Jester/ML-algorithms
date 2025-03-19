@@ -35,10 +35,16 @@
 
     ![$$J(\hat{y}) =\begin{cases} 1 - \hat{y} & \text{if } y = 0 \ \hat{y} & \text{if } y = 1 \end{cases}$$](image.png)
 
-  - Thus combining these two conditions, we get an equivalent function:
+  - Thus combining these two conditions, we get an equivalent function:</br>
     $$J(\hat{y}) = (1-\hat{y}^{(1-y)}) * \hat{y}^{(y)}$$
 
   - Taking a log on both the sides to put a cap on value and calculations, we get:
-    $$\left( y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right)$$
+    $$\left( y^{(i)} * \log(\hat{y}^{(i)}) + (1 - y^{(i)}) * \log(1 - \hat{y}^{(i)}) \right)$$
 
 ### 3. Gradient and Gradient descent
+
+- Gradient of J wrt w: </br>
+  $$\frac{\Delta J}{\Delta w} = \frac{1}{m} \sum X*(y - \hat{y})$$
+
+- Gradient of J wrt b: </br>
+  $$\frac{\Delta J}{\Delta b} = \frac{1}{m} \sum (y - \hat{y})$$
