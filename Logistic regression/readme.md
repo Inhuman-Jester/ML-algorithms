@@ -22,12 +22,12 @@
 
 - The curve of the functtion has its y intercept = 0.5
 
-- mathematically denoted by $$ ŷ = \frac{1}{1 + e^{-z}} $$
+- mathematically denoted by $$ ŷ = \frac{1}{1 + e^{-z}}$$
   > here z = w\*x + b for our logistic regression ŷ (prediction)
 
 ### 2. Cost function
 
-- $ J(w, b) = J(ŷ) = - \frac{1}{m} \sum\ \left( y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right) $
+- $J(w, b) = J(ŷ) = - \frac{1}{m} \sum\ \left( y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right)$
 
 - How did we obtain this?
 
