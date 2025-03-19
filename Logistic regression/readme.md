@@ -22,29 +22,35 @@
 
 - The curve of the functtion has its y intercept = 0.5
 
-- mathematically denoted by $$ŷ = \frac{1}{1 + e^{-z}}$$
+- mathematically denoted by</br>
+  $$ŷ = \frac{1}{1 + e^{-z}}$$
   > here z = w\*x + b for our logistic regression ŷ (prediction)
 
 ### 2. Cost function
 
-- $$J(w, b) = J(ŷ) = - \frac{1}{m} \sum\ \left( y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right)$$
+- $$J(w, b) = J(ŷ) = - \frac{1}{m} \sum\ \left( y^{(i)} \cdot \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \cdot \log(1 - \hat{y}^{(i)}) \right)$$
 
 - How did we obtain this?
 
   - We see from observation that the function should behave in the following manner:
 
-    ![$$J(\hat{y}) =\begin{cases} 1 - \hat{y} & \text{if } y = 0 \ \hat{y} & \text{if } y = 1 \end{cases}$$](image.png)
+    ![$$j(\hat{y}) =\begin{cases} 1 - \hat{y} & \text{if } y = 0 \ \hat{y} & \text{if } y = 1 \end{cases}$$](image.png)
 
   - Thus combining these two conditions, we get an equivalent function:</br>
-    $$J(\hat{y}) = (1-\hat{y}^{(1-y)}) * \hat{y}^{(y)}$$
+    $$j(\hat{y}) = (1-\hat{y}^{(1-y)}) \cdot \hat{y}^{(y)}$$
 
-  - Taking a log on both the sides to put a cap on value and calculations, we get:
-    $$\left( y^{(i)} * \log(\hat{y}^{(i)}) + (1 - y^{(i)}) * \log(1 - \hat{y}^{(i)}) \right)$$
+  - Taking a log on both the sides to put a cap on value and calculations, we get:</br>
+    $$J(\hat{y}) =\left( y^{(i)} \cdot \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \cdot \log(1 - \hat{y}^{(i)}) \right)$$
 
-### 3. Gradient and Gradient descent
+### 3. Gradient
 
-- Gradient of J wrt w: </br>
-  $$\frac{\Delta J}{\Delta w} = \frac{1}{m} \sum X*(y - \hat{y})$$
+- Gradient of J wrt w: </br> $$\frac{\Delta J(w, b)}{\Delta w} = \frac{1}{m} \sum X \cdot (y - \hat{y})$$
 
-- Gradient of J wrt b: </br>
-  $$\frac{\Delta J}{\Delta b} = \frac{1}{m} \sum (y - \hat{y})$$
+- Gradient of J wrt b: </br> $$\frac{\Delta J(w, b)}{\Delta b} = \frac{1}{m} \sum (y - \hat{y})$$
+
+### 4. Gradient descent
+
+- Gradient descent for weight:</br>
+  $$w = w - \alpha \cdot \frac{\Delta J(w, b)}{\Delta w}$$
+- Gradient descent for bias:</br>
+  $$b = b - \alpha \cdot \frac{\Delta J(w, b)}{\Delta w}$$
