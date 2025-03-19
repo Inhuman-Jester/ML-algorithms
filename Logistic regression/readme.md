@@ -22,22 +22,22 @@
 
 - The curve of the functtion has its y intercept = 0.5
 
-- mathematically denoted by $$ ŷ = \frac{1}{1 + e^{-z}}$$
+- mathematically denoted by $$ŷ = \frac{1}{1 + e^{-z}}$$
   > here z = w\*x + b for our logistic regression ŷ (prediction)
 
 ### 2. Cost function
 
-- $J(w, b) = J(ŷ) = - \frac{1}{m} \sum\ \left( y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right)$
+- $$J(w, b) = J(ŷ) = - \frac{1}{m} \sum\ \left( y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right)$$
 
 - How did we obtain this?
 
   - We see from observation that the function should behave in the following manner:
-    $$ J(\hat{y}) =\begin{cases} 1 - \hat{y} & \text{if } y = 0 \\ \hat{y} & \text{if } y = 1 \end{cases} $$
+    $$J(\hat{y}) =\begin{cases} 1 - \hat{y} & \text{if } y = 0 \\ \hat{y} & \text{if } y = 1 \end{cases}$$
 
   - Thus combining these two conditions, we get an equivalent function:
     $$J(\hat{y}) = (1-\hat{y}^{(1-y)}) * \hat{y}^{(y)}$$
 
   - Taking a log on both the sides to put a cap on value and calculations, we get:
-    $$ \left( y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right) $$
+    $$\left( y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right)$$
 
 ### 3. Gradient and Gradient descent
