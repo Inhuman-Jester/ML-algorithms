@@ -32,7 +32,14 @@
 - How did we obtain this?
 
   - We see from observation that the function should behave in the following manner:
-    $$J(\hat{y}) =\begin{cases} 1 - \hat{y} & \text{if } y = 0 \\ \hat{y} & \text{if } y = 1 \end{cases}$$
+
+    $$
+    J(\hat{y}) =
+    \begin{cases}
+    1 - \hat{y} & \text{if } y = 0 \\
+    \hat{y} & \text{if } y = 1
+    \end{cases}
+    $$
 
   - Thus combining these two conditions, we get an equivalent function:
     $$J(\hat{y}) = (1-\hat{y}^{(1-y)}) * \hat{y}^{(y)}$$
